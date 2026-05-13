@@ -1,1 +1,26 @@
+whoami - Ai đang chạy lệnh này? Trả về username hiện tại
 
+pwd - hiện đường dẫn tuyệt đối của thư mục hện tại /home/ng-viet-huynh. Linux dùng dâu "/" chứ không phải "\"
+
+ls - chỉ liệt kê tất cả các file trong thư mục không có dấu "."
+ls -la  - liệt kê tất cả(kể cả file ẩn bắt đầu bằng dấu .) với thông tin chi tiết.
+Trong CTF, file flag thường bị giấu trong file ẩn (.flag, .secret). Luôn dùng ls -la, không bao giờ chỉ ls.
+
+touch - tạo file rỗng(hoặc cập nhật timestamp nếu file đã tồn tại). Tạo nhiều file trong một lệnh cách nhau bởi dấu cách.
+
+echo "text" - in chuỗi ra màn hình.
+">" redirect: Chuyển output từ màn hình vào file.Cú pháp command > file ghi đè, command >> file thì ghi thêm vào cuối.
+
+cat greeting.txt
+cat .hidden_flag
+cat - đọc nội dung file(phù hợp với đọc file nhỏ)
+
+grep "chuỗi_cần_tìm" tên_file
+grep "flag" .hidden_flag : thì nó sẽ tìm chuỗi "flag" trong file .hidden_flag nếu có
+grep -r "flag" .   : dệ quy(-r) tìm chuỗi "flag " trong mọi file ở thư mục hiện tại.
+
+find — Tìm FILE theo tên/thuộc tính
+Khác grep (tìm trong nội dung), find tìm theo tên file, kích thước, thời gian, owner, v.v.
+find . -name "*.txt"
+find ~ -name ".hidden*"
+find / -type f -size +100M 2>/dev/null 
