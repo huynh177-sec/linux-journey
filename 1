@@ -18,6 +18,9 @@ cat - đọc nội dung file(phù hợp với đọc file nhỏ)
 grep "chuỗi_cần_tìm" tên_file
 grep "flag" .hidden_flag : thì nó sẽ tìm chuỗi "flag" trong file .hidden_flag nếu có
 grep -r "flag" .   : dệ quy(-r) tìm chuỗi "flag " trong mọi file ở thư mục hiện tại.
+-i: Không phân biệt chữ hoa, chữ thường.
+-v: Đảo ngược kết quả (hiển thị các dòng không chứa mẫu).
+-n: Hiển thị số dòng cùng với nội dung tìm được.-c: Đếm tổng số dòng khớp, thay vì hiển thị nội dung.-w: Tìm kiếm chính xác cả từ.
 
 find — Tìm FILE theo tên/thuộc tính
 Khác grep (tìm trong nội dung), find tìm theo tên file, kích thước, thời gian, owner, v.v.
