@@ -27,3 +27,22 @@ Khác grep (tìm trong nội dung), find tìm theo tên file, kích thước, th
 find . -name "*.txt"
 find ~ -name ".hidden*"
 find / -type f -size +100M 2>/dev/null 
+
+
+ wc -l dùng để đếm số dòng của một hoặc nhiều tệp tin văn bản, hoặc đếm số dòng từ kết quả đầu ra của một lệnh khác.
+
+ 
+sort trong Linux được sử dụng để sắp xếp các dòng trong tệp văn bản hoặc đầu ra (output) theo thứ tự bảng chữ cái, chữ số, hoặc theo một cột nhất định.
+Cú pháp cơ bản: sort [tùy_chọn] [tên_tệp]
+sort danh_sach.txt : sắp xếp tệp theo thứ tự tăng dần (A -> Z)
+**-r (Reverse): Sắp xếp theo thứ tự giảm dần (Z-A, lớn đến bé).
+-n (Numeric): Sắp xếp theo giá trị số thay vì thứ tự bảng chữ cái.
+-k (Key): Chỉ định cột (trường) cần sắp xếp (ví dụ: -k2 sắp xếp theo cột thứ 2).
+-u (Unique): Loại bỏ các dòng bị trùng lặp, chỉ giữ lại một dòng duy nhất.
+-t (Separator): Chỉ định ký tự phân cách cột (thay vì khoảng trắng mặc định).
+-o (Output): Lưu kết quả vào một tệp mới thay vì in ra màn hình.
+
+
+
+uniq là tiện ích dòng lệnh được dùng để lọc hoặc báo cáo các dòng văn bản bị trùng lặp
+uniq -u tenfile  : Chỉ in ra các dòng xuất hiện đúng 1 lần trong file.
