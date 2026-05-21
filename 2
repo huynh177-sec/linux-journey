@@ -1,2 +1,7 @@
-# linux-journey
+Base64 đơn giản là một bảng chữ cái quy ước gồm 64 ký tự (A-Z, a-z, 0-9, +, và /).
+Trong máy tính, có những dữ liệu là các byte nhị phân thô (như file ảnh, file thực thi) mà các hệ thống truyền tải văn bản (như Email, HTTP) không hiểu được hoặc sẽ làm hỏng chúng. Vì vậy, người ta dùng Base64 để "dịch" các khối nhị phân đó thành các ký tự chữ và số thông thường để truyền đi một cách an toàn. Khi đến đích, nó sẽ được dịch ngược lại.
+``
+1. Mã hóa (Encode)Mã hóa chuỗi:echo "nội_dung" | base64Mã hóa tập tin:base64 ten_file_goc.txt > ten_file_da_ma_hoa.txt
+2. Giải mã (Decode)Giải mã chuỗi:echo "chuỗi_base64" | base64 -d
+3. Giải mã tập tin:base64 -d ten_file_base64.txt > ten_file_goc.txt
 
