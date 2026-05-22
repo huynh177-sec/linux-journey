@@ -5,3 +5,8 @@ Trong máy tính, có những dữ liệu là các byte nhị phân thô (như f
 2. Giải mã (Decode)Giải mã chuỗi:echo "chuỗi_base64" | base64 -d
 3. Giải mã tập tin:base64 -d ten_file_base64.txt > ten_file_goc.txt
 
+
+ROT13: Là một dạng mã hóa Caesar cổ điển. Do bảng chữ cái có 26 ký tự, việc dịch chuyển 13 vị trí có tính chất đối xứng (dịch 13 bước 2 lần sẽ về lại ban đầu). Quá trình mã hóa và giải mã là hoàn toàn giống nhau.
+Lệnh tr: Dùng để biến đổi hoặc xóa các ký tự từ đầu vào chuẩn (stdin). 
+Cú pháp: tr [SET1] [SET2] sẽ ánh xạ từng ký tự ở SET1 sang ký tự tương ứng ở SET2. Rất hữu ích để giải các dạng mã hóa thay thế đơn giản (substitution ciphers) hoặc chuyển đổi chữ hoa/chữ thường.
+
