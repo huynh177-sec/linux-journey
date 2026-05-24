@@ -10,3 +10,22 @@ ROT13: Là một dạng mã hóa Caesar cổ điển. Do bảng chữ cái có 2
 Lệnh tr: Dùng để biến đổi hoặc xóa các ký tự từ đầu vào chuẩn (stdin). 
 Cú pháp: tr [SET1] [SET2] sẽ ánh xạ từng ký tự ở SET1 sang ký tự tương ứng ở SET2. Rất hữu ích để giải các dạng mã hóa thay thế đơn giản (substitution ciphers) hoặc chuyển đổi chữ hoa/chữ thường.
 
+
+Hexdump là gì? Máy tính đọc dữ liệu ở dạng nhị phân (010101). Khi con người muốn nhìn vào đống nhị phân đó mà không bị nổ não, họ chuyển nó sang hệ cơ số 16 (Hexadecimal - gồm các số 0-9 và chữ a-f). Hexdump chính là "bản dịch" của file nhị phân sang dạng mã Hex để con người (và các nhà phân tích mã độc) có thể đọc và chỉnh sửa từng byte một.
+Lệnh xxd: Chiếc chìa khóa 2 chiều.
+Nếu dùng bình thường: Nó băm một file thành mã Hex.
+Nếu gắn cờ -r (Reverse): Nó gom đống mã Hex đó, đúc ngược lại thành file gốc ban đầu (như bạn đã làm ở nhịp bóc vỏ đầu tiên).
+Lệnh xxd trong Linux dùng để chuyển đổi dữ liệu nhị phân (binary) sang mã thập lục phân (hexadecimal) và ngược lại
+Để nhận biết một file hexdump, bạn có thể dựa vào cấu trúc dữ liệu trực quan và định dạng đặc trưng của nó. Thay vì hiển thị chữ hoặc ký tự thông thường, file hexdump trình bày mã nhị phân dưới dạng các số thập lục phân (Hex - cơ số 16).
+
+Lệnh gunzip trong Linux được sử dụng để giải nén các tệp có đuôi .gz (được nén bởi gzip) và khôi phục chúng về trạng thái ban đầu. Nó tự động xóa đuôi .gz sau khi giải nén thành công.
+gunzip [tùy_chọn] tên_file.gz
+
+Lệnh bunzip2 trong Linux được sử dụng để giải nén các tập tin có đuôi .bz2 được tạo bởi thuật toán nén bzip2. Về bản chất, lệnh này hoạt động tương tự như việc chạy lệnh bzip2 -d. Theo mặc định, nó sẽ giải nén tập tin và tự động xóa tập tin .bz2
+bunzip2 ten_file.bz2
+
+Lệnh tar xf trong Linux được sử dụng để giải nén các tệp lưu trữ (thường có đuôi .tar) vào thư mục hiện tại
+tar xf ten_tep_tin.tar
+
+
+
