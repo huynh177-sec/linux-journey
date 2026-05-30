@@ -1,0 +1,22 @@
+Nmap (Network Mapper) là công cụ dòng lệnh mạnh mẽ trong Linux dùng để khám phá mạng và kiểm tra bảo mật. Nmap giúp quản trị viên xác định các máy chủ đang hoạt động, phát hiện các cổng (port) đang mở, dịch vụ đang chạy và hệ điều hành của mục tiêu.
+Lệnh nmap -p 31000-32000 -sV localhost dùng để quét và xác định phiên bản dịch vụ đang chạy trên các cổng từ 31000 đến 32000 tại máy cục bộ (localhost).Dưới đây là giải thích chi tiết từng thành phần của câu lệnh:
+Ý nghĩa các tham số
+nmap: Tên công cụ quét mạng và kiểm tra bảo mật (Network Mapper).
+-p 31000-32000: Chỉ định phạm vi cổng (port) cần quét là từ 31000 đến 32000. Thay vì quét 1000 cổng mặc định, Nmap sẽ chỉ kiểm tra 1001 cổng trong khoảng này.
+-sV: Kích hoạt tính năng Service Version Detection. Nmap sẽ gửi các gói tin đặc thù đến cổng đang mở để xác định tên dịch vụ và số phiên bản chính xác (ví dụ: Apache 2.4.41, OpenSSH 8.2).
+localhost: Mục tiêu quét là chính máy tính bạn đang chạy lệnh (địa chỉ IP tương đương là 127.0.0.1).
+
+
+
+Lệnh openssl s_client trong Linux là công cụ dòng lệnh thiết yếu dùng để thiết lập kết nối SSL/TLS với một máy chủ từ xa. Nó giúp quản trị viên kiểm tra kết nối mạng, gỡ lỗi cấu hình chứng chỉ (SSL/TLS certificates) và xem chuỗi chứng chỉ được máy chủ gửi về.
+openssl s_client -connect <hostname>:<port> (ví dụ: google.com:443)
+tCờ -quiet trong lệnh openssl s_client dùng để ẩn thông tin cấu hình SSL/TLS và chỉ hiển thị dữ liệu văn bản thuần túy nhận được từ máy chủ.
+Tác dụng chính
+Rút gọn kết quả: Ẩn toàn bộ thông tin về chứng chỉ (Certificate chain), bộ mã hóa (Cipher handshake), và các thông số kỹ thuật kết nối.
+Lọc dữ liệu sạch: Giúp màn hình terminal không bị tràn ngập thông tin kỹ thuật, dễ dàng nhìn thấy phản hồi thực tế từ server.
+Tối ưu cho Script: Rất hữu ích khi viết script tự động hóa (bash script) để trích xuất dữ liệu mà không cần dùng lệnh grep để lọc bỏ rác.
+
+Lệnh nano là một trình soạn thảo văn bản dòng lệnh trực quan và cực kỳ phổ biến trên hệ điều hành Linux. Công cụ này giúp bạn dễ dàng tạo mới, mở, chỉnh sửa và lưu các tệp văn bản (như file cấu hình hoặc mã nguồn) trực tiếp trong cửa sổ terminal mà không cần dùng đến chuột.
+1. Cú pháp cơ bản
+Để mở hoặc tạo một tệp, bạn dùng lệnh sau:nano <tên_tệp> (Ví dụ: nano file.txt)
+Lưu ý: Nếu tệp không tồn tại, Nano sẽ tự động tạo một tệp mới với tên đó.
