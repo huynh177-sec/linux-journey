@@ -1,0 +1,23 @@
+-git clone — Tải kho lưu trữ về máy.
+-Lệnh git clone trong Linux dùng để sao chép một kho lưu trữ mã nguồn (Repository) từ trên mạng (như GitHub, GitLab) về máy tính cá nhân.
+git clone <đường-dẫn-URL-kho-lưu-trữ>
+
+
+Lệnh git log: Xem danh sách lịch sử các lần thay đổi (các Commit).
+Lệnh git log -p: Xem chi tiết sự thay đổi nội dung (diff) của từng Commit.
+Dòng bắt đầu bằng dấu trừ màu đỏ (-): Nội dung đã bị xóa/thay thế.
+Dòng bắt đầu bằng dấu cộng màu xanh (+): Nội dung mới được thêm vào
+
+Lệnh git branch -a trong Linux được dùng để liệt kê tất cả các nhánh (branches) trong kho lưu trữ Git của bạn, bao gồm cả các nhánh ở máy cục bộ (local) và các nhánh ở trên máy chủ từ xa (remote).
+Ký tự -a là viết tắt của --all.
+Cách hiển thị kết quả: khi chạy lệnh này trong terminal của Linux, Git sẽ hiển thị danh sách các nhánh với quy ước màu sắc và ký hiệu đặc trưng:
+Nhánh có dấu sao * và màu xanh lá: Là nhánh cục bộ hiện tại bạn đang đứng (đang checkout).
+Nhánh chữ thường màu trắng/đen: Các nhánh cục bộ (local branches) khác đang có trên máy của bạn.Nhánh có tiền tố remotes/origin/ và màu đỏ: Các nhánh nằm trên máy chủ từ xa (remote branches) như GitHub, GitLab.
+
+
+Lệnh git checkout trong Linux là một công cụ đa năng dùng để chuyển đổi giữa các nhánh (branch), khôi phục tập tin hoặc quay lại các điểm cam kết (commit) cũ trong kho lưu trữ Git. Hệ điều hành Linux chạy lệnh này thông qua Terminal dựa trên mã nguồn mở .
+git checkout <tên_nhánh>
+
+
+Lệnh git tag trong Linux được dùng để đánh dấu các điểm mốc quan trọng (thường là các phiên bản phát hành như v1.0, v2.0) trong lịch sử commit của dự án.
+Lệnh git show trong Linux được sử dụng để hiển thị thông tin chi tiết và nội dung thay đổi của một đối tượng Git cụ thể (như commit, tag, hoặc file).
